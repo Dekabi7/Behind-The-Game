@@ -1,4 +1,4 @@
-﻿# Behind the Game — Website
+# Behind the Game — Website
 
 Custom rebuild of [behindthegame.com](https://behindthegame.com), replacing the existing Wix site.
 
@@ -14,7 +14,7 @@ Behind the Game is a sports business and consulting organization connecting unde
 |---|---|
 | Framework | Next.js (App Router) |
 | Styling | Tailwind CSS |
-| Content | MDX for articles *(pending decision — see Open Decisions)* |
+| Content | MDX for articles (locked — no Sanity) |
 | Forms | Formspree |
 | Hosting | Vercel |
 | Analytics | TBD (Plausible or GA4) |
@@ -56,6 +56,8 @@ NEXT_PUBLIC_SITE_URL=https://behindthegame.com
 | `/articles` | Blog index and post template |
 | `/get-involved` | For Brands / For Students / For Partners, plus contact form |
 
+All six routes are stubbed and live behind the shared nav/footer as of Day 1. Full page builds land Day 2–5 per [`docs/build-plan.md`](docs/build-plan.md).
+
 ## Design system
 
 Editorial black, white, and red. Near-black backgrounds with heavy white grotesque headlines and a single red accent used sparingly.
@@ -71,15 +73,16 @@ Editorial black, white, and red. Near-black backgrounds with heavy white grotesq
 
 Red is an accent, not a fill — borders, small caps labels, and single interactive elements. Watch contrast on red-on-black text; use it at 13px+ and check against WCAG AA before shipping.
 
+Headline typeface: Archivo (weights 700/900) as a placeholder pending license confirmation — see Open Decisions. Body: Inter.
+
 ## Project structure
 
 ```
 app/                 # routes
-components/          # shared UI (nav, footer, buttons, section, image blocks)
+components/          # shared UI (nav, footer, page-header, buttons, image blocks)
 content/articles/    # MDX posts
-lib/                 # helpers
+lib/                 # content.ts + helpers
 public/              # images, logo, favicon, OG assets
-styles/              # globals, design tokens
 docs/                # build plan and specs
 ```
 
@@ -98,13 +101,15 @@ image: "/images/articles/slug.jpg"
 
 Events are data-driven in `lib/events.ts` — adding an event should be a data entry, never a layout rebuild.
 
+Site copy, nav links, and per-page intros live in `lib/content.ts` as a single source of truth. Everything in there is placeholder until the client content drop on Jul 31.
+
 ---
 
 ## Deployment
 
 Pushes to `main` deploy to production via Vercel. All other branches get preview URLs.
 
-Domain is currently registered through Wix and needs to be pointed at Vercel before launch.
+Domain is currently registered through Wix. Per the execution plan, launch does **not** require a registrar transfer — only repointing DNS (A record + CNAME) from Wix to Vercel, done on Day 7.
 
 ## Branching
 
@@ -117,8 +122,7 @@ Commit style: `feat:`, `fix:`, `style:`, `content:`, `chore:`
 
 ## Open decisions
 
-- [ ] **Articles CMS** — MDX in-repo vs. Sanity. Depends on whether the client needs to self-publish.
-- [ ] **Headline typeface** — confirm license if it's a paid face.
+- [ ] **Headline typeface** — confirm license if it's a paid face (Archivo used as placeholder).
 - [ ] **Analytics** — Plausible (paid, privacy-first) vs. GA4 (free).
 
 ## Assets needed from client
@@ -128,10 +132,10 @@ Commit style: `feat:`, `fix:`, `style:`, `content:`, `chore:`
 - [ ] Headshots and bios
 - [ ] Final copy for all six pages
 - [ ] Maryland event details
-- [ ] Domain registrar access
+- [ ] Wix DNS panel access (for the A record / CNAME repoint — no registrar transfer needed)
 
 ---
 
 ## Docs
 
-- [`docs/build-plan.md`](docs/build-plan.md) — the 14-day build schedule
+- [`docs/build-plan.md`](docs/build-plan.md) — the 9-day execution plan (day-by-day scope, risk register, pre-launch checklist)
