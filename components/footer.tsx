@@ -26,7 +26,7 @@ export function Footer() {
 
         <Link
           href={footerContent.cta.href}
-          className="eyebrow rounded-full border border-accent px-5 py-2 transition-colors hover:bg-accent hover:text-text"
+          className="eyebrow rounded-full border border-accent px-5 py-2 text-accent transition-colors hover:bg-accent hover:text-black"
         >
           {footerContent.cta.label}
         </Link>

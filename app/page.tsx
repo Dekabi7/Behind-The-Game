@@ -10,7 +10,7 @@ export default function HomePage() {
     <>
       <Section className="grid gap-12 py-16 sm:py-24 lg:grid-cols-2 lg:items-center">
         <div>
-          <span className="eyebrow">{hero.eyebrow}</span>
+          <span className="eyebrow text-accent">{hero.eyebrow}</span>
           <h1 className="mt-4 font-display text-4xl font-black tracking-tight sm:text-6xl">
             {hero.title}
           </h1>
@@ -27,7 +27,7 @@ export default function HomePage() {
           <PlaceholderImage label="Howard pilot photo" aspect="aspect-[3/4]" />
           <PlaceholderImage label="BTG photo" aspect="aspect-[3/4]" className="mt-8" />
           <div className="col-span-2 border border-border bg-surface p-6">
-            <span className="eyebrow">{hero.recap.meta}</span>
+            <span className="eyebrow text-accent">{hero.recap.meta}</span>
             <p className="mt-2 font-display text-xl font-bold">{hero.recap.title}</p>
             <p className="mt-2 text-sm text-text-muted">{hero.recap.body}</p>
           </div>
@@ -41,7 +41,7 @@ export default function HomePage() {
           </p>
         </div>
         <div className="order-1 lg:order-2">
-          <span className="eyebrow">{mission.eyebrow}</span>
+          <span className="eyebrow text-accent">{mission.eyebrow}</span>
           <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
             {mission.title}
           </h2>
@@ -50,7 +50,7 @@ export default function HomePage() {
       </Section>
 
       <Section className="border-t border-border py-20">
-        <span className="eyebrow">What We Do</span>
+        <span className="eyebrow text-accent">What We Do</span>
         <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
           The Five Programs
         </h2>
@@ -66,7 +66,7 @@ export default function HomePage() {
 
       <Section className="grid gap-12 border-t border-border py-20 lg:grid-cols-2 lg:items-center">
         <div>
-          <span className="eyebrow">{pilot.eyebrow}</span>
+          <span className="eyebrow text-accent">{pilot.eyebrow}</span>
           <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
             {pilot.title}
           </h2>
@@ -76,7 +76,7 @@ export default function HomePage() {
       </Section>
 
       <Section className="border-t border-border py-20 text-center">
-        <span className="eyebrow">{cta.eyebrow}</span>
+        <span className="eyebrow text-accent">{cta.eyebrow}</span>
         <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-5xl">
           {cta.title}
         </h2>
