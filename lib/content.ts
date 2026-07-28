@@ -78,8 +78,13 @@ export const pageIntros: Record<string, PageIntro> = {
 export const homeContent = {
   hero: {
     ...pageIntros.home,
-    ctaLabel: "See the Collection",
+    ctaLabel: "View the Collection",
     ctaHref: "/events",
+    recap: {
+      meta: "Howard University — March 2026",
+      title: "Pilot Recap",
+      body: "Placeholder recap card copy — real copy and photography land Fri Jul 31.",
+    },
   },
   mission: {
     eyebrow: "Our Story",
