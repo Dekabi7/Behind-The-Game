@@ -110,3 +110,48 @@ export const homeContent = {
     ctaHref: "/get-involved",
   },
 };
+
+export const digitalLandscapeContent = {
+  intro: {
+    eyebrow: "Digital Landscape",
+    title: "Our Digital Presence",
+    body: "Placeholder philosophy copy — real copy lands Fri Jul 31. How Behind the Game shows up across platforms, and how the content ecosystem serves the mission.",
+  },
+  platforms: [
+    {
+      name: "Instagram",
+      href: "#",
+      description: "Placeholder platform description — real copy and URL land Fri Jul 31.",
+    },
+    {
+      name: "LinkedIn",
+      href: "#",
+      description: "Placeholder platform description — real copy and URL land Fri Jul 31.",
+    },
+    {
+      name: "YouTube",
+      href: "#",
+      description: "Placeholder platform description — real copy and URL land Fri Jul 31.",
+    },
+  ],
+  communityImpact: {
+    eyebrow: "Community Impact",
+    title: "Built With the Community",
+    body: "Placeholder community impact copy — real copy lands Fri Jul 31.",
+  },
+};
+
+export const eventsContent = {
+  hero: {
+    eyebrow: "Symposium Series",
+    title: "Moments Mean Everything",
+    body: "Placeholder recap copy — real copy lands Fri Jul 31.",
+  },
+  highlightsLabel: "Past Event Highlights",
+  cta: {
+    eyebrow: "Up Next",
+    title: "Join the Next Game",
+    ctaLabel: "Join the Next Game",
+    ctaHref: "/get-involved",
+  },
+};
