@@ -182,7 +182,7 @@ export const cvContent = {
     eyebrow: "Founder",
     body: "Placeholder bio copy — real copy lands Fri Jul 31.",
   },
-  name: "Daud [Last Name]",
+  name: "Daud Gantt-Bay",
   role: "Founder, Behind the Game",
   linkedinHref: "#",
   email: "placeholder@behindthegame.com",
