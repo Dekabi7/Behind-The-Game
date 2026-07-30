@@ -1,57 +1,32 @@
 "use client";
 
 import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { getInvolvedContent } from "@/lib/content";
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
 
-type Status = "idle" | "submitting" | "success" | "error";
-
 const fieldClasses =
   "w-full border border-border bg-surface px-4 py-3 text-text focus:border-accent focus:outline-none";
 const labelClasses = "mb-2 block text-sm font-medium text-text-muted";
+const fieldErrorClasses = "mt-2 text-sm text-accent";
 
 export function ContactForm() {
   const [role, setRole] = useState<string>(getInvolvedContent.roles[0]);
-  const [status, setStatus] = useState<Status>("idle");
-  const [errorMessage, setErrorMessage] = useState("");
+  // useForm throws if given a falsy key, and hooks can't be called
+  // conditionally — fall back to a placeholder that's never submitted
+  // when the env var isn't set (the guard below skips rendering <form>).
+  const [state, handleSubmit] = useForm(FORMSPREE_ID || "unconfigured");
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-
-    if (!FORMSPREE_ID) {
-      setStatus("error");
-      setErrorMessage(
-        "Form isn't connected yet — set NEXT_PUBLIC_FORMSPREE_ID in .env.local."
-      );
-      return;
-    }
-
-    setStatus("submitting");
-
-    try {
-      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(form),
-      });
-
-      if (response.ok) {
-        setStatus("success");
-        form.reset();
-        setRole(getInvolvedContent.roles[0]);
-      } else {
-        setStatus("error");
-        setErrorMessage("Something went wrong — please try again.");
-      }
-    } catch {
-      setStatus("error");
-      setErrorMessage("Something went wrong — please try again.");
-    }
+  if (!FORMSPREE_ID) {
+    return (
+      <p className="text-sm text-accent">
+        Form isn&apos;t connected yet — set NEXT_PUBLIC_FORMSPREE_ID in .env.local.
+      </p>
+    );
   }
 
-  if (status === "success") {
+  if (state.succeeded) {
     return (
       <div className="border border-border bg-surface p-8 text-center">
         <p className="font-display text-xl font-bold">Thanks — we&apos;ve got it.</p>
@@ -90,12 +65,14 @@ export function ContactForm() {
             Name
           </label>
           <input id="name" name="name" type="text" required className={fieldClasses} />
+          <ValidationError prefix="Name" field="name" errors={state.errors} className={fieldErrorClasses} />
         </div>
         <div>
           <label htmlFor="email" className={labelClasses}>
             Email
           </label>
           <input id="email" name="email" type="email" required className={fieldClasses} />
+          <ValidationError prefix="Email" field="email" errors={state.errors} className={fieldErrorClasses} />
         </div>
       </div>
 
@@ -117,16 +94,17 @@ export function ContactForm() {
           Message
         </label>
         <textarea id="message" name="message" rows={5} required className={fieldClasses} />
+        <ValidationError prefix="Message" field="message" errors={state.errors} className={fieldErrorClasses} />
       </div>
 
-      {status === "error" && <p className="text-sm text-accent">{errorMessage}</p>}
+      <ValidationError errors={state.errors} className={fieldErrorClasses} />
 
       <button
         type="submit"
-        disabled={status === "submitting"}
+        disabled={state.submitting}
         className="inline-flex items-center gap-2 bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-wide text-text transition-opacity hover:opacity-90 disabled:opacity-50"
       >
-        {status === "submitting" ? "Sending…" : "Submit"}
+        {state.submitting ? "Sending…" : "Submit"}
       </button>
     </form>
   );
