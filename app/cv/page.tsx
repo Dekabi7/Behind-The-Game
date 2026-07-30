@@ -20,7 +20,12 @@ export default function CvPage() {
           <p className="mt-6 max-w-2xl text-lg text-text-muted">{intro.body}</p>
 
           <div className="mt-6 flex flex-wrap gap-6 text-sm font-semibold uppercase tracking-wide">
-            <Link href={linkedinHref} className="text-accent transition-colors hover:text-text">
+            <Link
+              href={linkedinHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent transition-colors hover:text-text"
+            >
               LinkedIn →
             </Link>
             <a href={`mailto:${email}`} className="text-accent transition-colors hover:text-text">
