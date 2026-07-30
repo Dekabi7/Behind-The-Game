@@ -155,3 +155,40 @@ export const eventsContent = {
     ctaHref: "/get-involved",
   },
 };
+
+export const getInvolvedContent = {
+  hero: {
+    eyebrow: "Get Involved",
+    title: "Power the Future of Sports",
+    body: "Placeholder copy — real copy lands Fri Jul 31. For brands, students, and partners looking to work with Behind the Game.",
+  },
+  roles: ["Speaker", "Brand Partner", "Student"] as const,
+  focusAreas: [
+    "Mentorship",
+    "Internships & Career Pathways",
+    "Speaking & Panels",
+    "Partnerships & Sponsorship",
+    "Other",
+  ],
+  benefits: [
+    { title: "Benefit One", description: "Placeholder benefit description — real copy lands Fri Jul 31." },
+    { title: "Benefit Two", description: "Placeholder benefit description — real copy lands Fri Jul 31." },
+    { title: "Benefit Three", description: "Placeholder benefit description — real copy lands Fri Jul 31." },
+  ],
+};
+
+export const cvContent = {
+  intro: {
+    eyebrow: "Founder",
+    body: "Placeholder bio copy — real copy lands Fri Jul 31.",
+  },
+  name: "Daud [Last Name]",
+  role: "Founder, Behind the Game",
+  linkedinHref: "#",
+  email: "placeholder@behindthegame.com",
+  projects: [
+    { title: "CBA Project", description: "Placeholder project description.", href: "#" },
+    { title: "Data Visualizations", description: "Placeholder project description.", href: "#" },
+    { title: "CBA Recommendations", description: "Placeholder project description.", href: "#" },
+  ],
+};
