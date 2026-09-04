@@ -74,7 +74,7 @@ Editorial maroon, gold, and near-black, matching the real logo (updated Sept 3 �
 
 Two accent roles, not one: gold is the thin/text role red used to play (it has the luminance to read on near-black); maroon is a dark color, so it's reserved for solid fills where a light label sits on top of it. Watch contrast on the gold accent; use it at 13px+ and check against WCAG AA before shipping.
 
-Headline typeface: Archivo (weights 700/900) as a placeholder pending license confirmation — see Open Decisions. Body: Inter.
+Headline typeface: Oswald (weight 700) — confirmed Sept 4, replacing the placeholder Archivo after comparing it against Anton, Bebas Neue, and the original side by side. Free Google Font, no licensing cost. Body: Inter.
 
 ## Project structure
 
@@ -123,8 +123,8 @@ Commit style: `feat:`, `fix:`, `style:`, `content:`, `chore:`
 
 ## Open decisions
 
-- [ ] **Headline typeface** — confirm license if it's a paid face (Archivo used as placeholder).
-- [ ] **Analytics** — Plausible (paid, privacy-first) vs. GA4 (free).
+- [x] **Headline typeface** — Oswald, confirmed Sept 4.
+- [x] **Analytics** — GA4, confirmed Sept 4. Wired in (`@next/third-parties/google`), gated on `NEXT_PUBLIC_GA_MEASUREMENT_ID` — still needs the actual GA4 property created and the measurement ID added to Vercel.
 
 ## Assets needed from client
 

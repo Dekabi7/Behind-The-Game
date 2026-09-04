@@ -17,7 +17,7 @@ export default function EventsPage() {
     <>
       <Section className="py-16 text-center sm:py-24">
         <span className="eyebrow text-accent">{hero.eyebrow}</span>
-        <h1 className="mt-4 font-display text-4xl font-black tracking-tight sm:text-6xl">
+        <h1 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-6xl">
           {hero.title}
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-text-muted">{hero.body}</p>
@@ -30,7 +30,7 @@ export default function EventsPage() {
             <Section className="grid gap-12 py-20 lg:grid-cols-2 lg:items-center">
               <div className={flipped ? "lg:order-2" : ""}>
                 <span className="eyebrow text-accent">Recap</span>
-                <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
+                <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
                   {event.name}
                 </h2>
                 <p className="mt-4 text-sm font-medium uppercase tracking-wide text-text-muted">
@@ -69,7 +69,7 @@ export default function EventsPage() {
 
       <Section className="border-t border-border py-20 text-center">
         <span className="eyebrow text-accent">{cta.eyebrow}</span>
-        <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-5xl">
+        <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-5xl">
           {cta.title}
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-text-muted">{cta.body}</p>

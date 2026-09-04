@@ -19,7 +19,7 @@ export default function CvPage() {
 
         <div>
           <span className="eyebrow text-accent">{intro.eyebrow}</span>
-          <h1 className="mt-4 font-display text-4xl font-black tracking-tight sm:text-5xl">
+          <h1 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
             {name}
           </h1>
           <p className="mt-2 text-text-muted">{role}</p>
@@ -43,7 +43,7 @@ export default function CvPage() {
 
       <Section className="border-t border-border py-20">
         <span className="eyebrow text-accent">Projects</span>
-        <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
+        <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
           Selected Work
         </h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

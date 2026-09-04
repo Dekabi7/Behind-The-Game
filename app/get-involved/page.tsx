@@ -15,7 +15,7 @@ export default function GetInvolvedPage() {
     <>
       <Section className="py-16 text-center sm:py-24">
         <span className="eyebrow text-accent">{hero.eyebrow}</span>
-        <h1 className="mt-4 font-display text-4xl font-black tracking-tight sm:text-6xl">
+        <h1 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-6xl">
           {hero.title}
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-text-muted">{hero.body}</p>

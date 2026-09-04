@@ -13,10 +13,10 @@ Source of truth for the build. Originally a fixed 9-day sprint (Jul 27 – Aug 5
 - **Design system:** updated Sept 3 — the real logo landed (maroon/gold, not the MVP spec's red/black); accent recolored to match (see Day 3)
 - **Structure:** six pages confirmed
 
-## Open decisions — close before Fri Sept 4 QA
+## Open decisions
 
-- [ ] **Headline typeface** — Archivo is a placeholder pending license confirmation (see README Open Decisions)
-- [ ] **Analytics** — Plausible (paid, privacy-first) vs. GA4 (free)
+- [x] **Headline typeface** — Oswald, confirmed Sept 4 (compared against Anton, Bebas Neue, and Archivo side by side; Oswald is the only one of the three alternatives with a real weight range, so it stays legible from hero size down to small card titles without needing synthetic bold)
+- [x] **Analytics** — GA4, confirmed Sept 4. Code-side wired in via `@next/third-parties/google`, gated on `NEXT_PUBLIC_GA_MEASUREMENT_ID` so nothing fires without a real ID. Still needs: GA4 property created in Google Analytics, measurement ID added to Vercel env vars, Enhanced Measurement turned on for client-side pageviews
 
 ## Day by day
 

@@ -66,7 +66,7 @@ export default async function ArticlePage({
     <article>
       <Section className="max-w-3xl py-16 sm:py-24">
         <span className="eyebrow text-accent">{formatArticleDate(article.frontmatter.date)}</span>
-        <h1 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-5xl">
+        <h1 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-5xl">
           {article.frontmatter.title}
         </h1>
         <p className="mt-6 text-lg text-text-muted">{article.frontmatter.excerpt}</p>

@@ -12,7 +12,7 @@ export default function HomePage() {
       <Section className="grid gap-12 py-16 sm:py-24 lg:grid-cols-2 lg:items-center">
         <div>
           <span className="eyebrow text-accent">{hero.eyebrow}</span>
-          <h1 className="mt-4 font-display text-4xl font-black tracking-tight sm:text-6xl">
+          <h1 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-6xl">
             {hero.title}
           </h1>
           <p className="mt-6 max-w-md text-lg text-text-muted">{hero.description}</p>
@@ -52,7 +52,7 @@ export default function HomePage() {
         </div>
         <div className="order-1 lg:order-2">
           <span className="eyebrow text-accent">{mission.eyebrow}</span>
-          <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
             {mission.title}
           </h2>
           <p className="mt-6 text-lg text-text-muted">{mission.body}</p>
@@ -61,7 +61,7 @@ export default function HomePage() {
 
       <Section className="border-t border-border py-20">
         <span className="eyebrow text-accent">What We Do</span>
-        <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
+        <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
           The Five Programs
         </h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -77,7 +77,7 @@ export default function HomePage() {
       <Section className="grid gap-12 border-t border-border py-20 lg:grid-cols-2 lg:items-center">
         <div>
           <span className="eyebrow text-accent">{pilot.eyebrow}</span>
-          <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
             {pilot.title}
           </h2>
           <p className="mt-6 text-lg text-text-muted">{pilot.body}</p>
@@ -92,7 +92,7 @@ export default function HomePage() {
 
       <Section className="border-t border-border py-20 text-center">
         <span className="eyebrow text-accent">{cta.eyebrow}</span>
-        <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-5xl">
+        <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-5xl">
           {cta.title}
         </h2>
         <Link

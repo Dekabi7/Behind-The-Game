@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Archivo, Inter } from "next/font/google";
+import { Oswald, Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { siteConfig } from "@/lib/content";
 import "./globals.css";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
-  weight: ["700", "900"],
+  weight: ["700"],
 });
 
 const inter = Inter({
@@ -45,13 +48,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${inter.variable} h-full antialiased`}
+      className={`${oswald.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg font-sans text-text">
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
+      {gaMeasurementId && <GoogleAnalytics gaId={gaMeasurementId} />}
     </html>
   );
 }

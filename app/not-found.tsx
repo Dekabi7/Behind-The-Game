@@ -6,7 +6,7 @@ export default function NotFound() {
     <div className="mx-auto flex max-w-xl flex-col items-center px-6 py-24 text-center sm:py-32">
       <Image src="/images/logo.png" alt="Behind the Game" width={483} height={501} className="h-20 w-auto" />
       <span className="eyebrow mt-8 text-accent">404</span>
-      <h1 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-5xl">
+      <h1 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-5xl">
         Page Not Found
       </h1>
       <p className="mt-6 text-lg text-text-muted">
