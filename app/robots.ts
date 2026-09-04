@@ -1,18 +1,16 @@
 import type { MetadataRoute } from "next";
 import { headers } from "next/headers";
-import { siteConfig } from "@/lib/content";
-
-const canonicalHost = new URL(siteConfig.url).host;
+import { BRAND_DOMAIN, getSiteUrl } from "@/lib/site-url";
 
 export default async function robots(): Promise<MetadataRoute.Robots> {
   const host = (await headers()).get("host") ?? "";
 
-  if (host !== canonicalHost) {
+  if (host !== BRAND_DOMAIN) {
     return { rules: { userAgent: "*", disallow: "/" } };
   }
 
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: `${siteConfig.url}/sitemap.xml`,
+    sitemap: `${getSiteUrl()}/sitemap.xml`,
   };
 }

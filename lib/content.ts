@@ -3,7 +3,6 @@ export const siteConfig = {
   legalName: "Behind the Game",
   tagline:
     "Connecting underserved students and student-athletes — particularly at HBCUs — to opportunities across the global sports industry.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://behindthegame.com",
 };
 
 export type NavLink = {

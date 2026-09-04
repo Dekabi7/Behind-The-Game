@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/content";
+import { getSiteUrl } from "@/lib/site-url";
 import { getAllArticles } from "@/lib/articles";
 
 const staticRoutes = [
@@ -12,15 +12,17 @@ const staticRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const siteUrl = getSiteUrl();
+
   const articleEntries = getAllArticles().map((article) => ({
-    url: `${siteConfig.url}/articles/${article.slug}`,
+    url: `${siteUrl}/articles/${article.slug}`,
     lastModified: article.frontmatter.date,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   const staticEntries = staticRoutes.map((route) => ({
-    url: `${siteConfig.url}${route.path}`,
+    url: `${siteUrl}${route.path}`,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));

@@ -4,9 +4,11 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { siteConfig } from "@/lib/content";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const siteUrl = getSiteUrl();
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -20,7 +22,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(siteUrl),
   title: {
     default: siteConfig.name,
     template: `%s — ${siteConfig.name}`,
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.tagline,
-    url: siteConfig.url,
+    url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",

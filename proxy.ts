@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { siteConfig } from "@/lib/content";
-
-const canonicalHost = new URL(siteConfig.url).host;
+import { BRAND_DOMAIN } from "@/lib/site-url";
 
 // Until DNS is repointed (Day 7 of the build plan), every request hits this
 // app through a *.vercel.app preview hostname. Keep those out of search
@@ -11,7 +9,7 @@ export function proxy(request: NextRequest) {
   const host = request.headers.get("host") ?? "";
   const response = NextResponse.next();
 
-  if (host !== canonicalHost) {
+  if (host !== BRAND_DOMAIN) {
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
   }
 

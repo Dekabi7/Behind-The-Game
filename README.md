@@ -40,8 +40,10 @@ Copy `.env.example` to `.env.local` and fill in:
 
 ```
 NEXT_PUBLIC_FORMSPREE_ID=
-NEXT_PUBLIC_SITE_URL=https://behindthegame.com
+NEXT_PUBLIC_GA_MEASUREMENT_ID=
 ```
+
+There's deliberately no `NEXT_PUBLIC_SITE_URL` — the site's own base URL (used for `metadataBase`, OG image URLs, and the sitemap) auto-detects from Vercel's `VERCEL_PROJECT_PRODUCTION_URL`, so it's always wherever the deployment is actually reachable rather than a manually-set value that can drift out of sync (see `lib/site-url.ts`). The noindex-staging logic in `proxy.ts`/`app/robots.ts` checks against the hardcoded brand domain (`behindthegame.com`) instead, independent of that.
 
 ---
 
