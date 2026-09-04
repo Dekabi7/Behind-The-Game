@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { ContactForm } from "@/components/contact-form";
-import { getInvolvedContent } from "@/lib/content";
+import { getInvolvedContent, pageIntros } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: pageIntros.getInvolved.title,
+  description: pageIntros.getInvolved.description,
+};
 
 export default function GetInvolvedPage() {
   const { hero, benefits } = getInvolvedContent;

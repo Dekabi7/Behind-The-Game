@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/section";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { pageIntros } from "@/lib/content";
 import { getAllArticles, formatArticleDate } from "@/lib/articles";
+
+export const metadata: Metadata = {
+  title: pageIntros.articles.title,
+  description: pageIntros.articles.description,
+};
 
 export default function ArticlesPage() {
   const articles = getAllArticles();

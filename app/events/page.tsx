@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { eventsContent } from "@/lib/content";
+import { eventsContent, pageIntros } from "@/lib/content";
 import { events } from "@/lib/events";
+
+export const metadata: Metadata = {
+  title: pageIntros.events.title,
+  description: pageIntros.events.description,
+};
 
 export default function EventsPage() {
   const { hero, cta } = eventsContent;
@@ -40,6 +46,7 @@ export default function EventsPage() {
                 src={event.images[0].src}
                 aspect="aspect-[4/5]"
                 className={flipped ? "lg:order-1" : ""}
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </Section>
 
@@ -51,6 +58,7 @@ export default function EventsPage() {
                     label={image.alt}
                     src={image.src}
                     aspect="aspect-[21/9]"
+                    sizes="(min-width: 640px) 50vw, 100vw"
                   />
                 ))}
               </div>

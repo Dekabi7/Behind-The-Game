@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { cvContent } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: cvContent.name,
+  description: cvContent.intro.body,
+};
 
 export default function CvPage() {
   const { intro, name, role, linkedinHref, email, projects } = cvContent;
@@ -41,16 +47,23 @@ export default function CvPage() {
           Selected Work
         </h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <Link
-              key={project.title}
-              href={project.href}
-              className="block border border-border p-6 transition-colors hover:border-accent"
-            >
-              <p className="font-display text-lg font-bold">{project.title}</p>
-              <p className="mt-2 text-sm text-text-muted">{project.description}</p>
-            </Link>
-          ))}
+          {projects.map((project) =>
+            project.href === "#" ? (
+              <div key={project.title} className="block border border-border p-6">
+                <p className="font-display text-lg font-bold">{project.title}</p>
+                <p className="mt-2 text-sm text-text-muted">{project.description}</p>
+              </div>
+            ) : (
+              <Link
+                key={project.title}
+                href={project.href}
+                className="block border border-border p-6 transition-colors hover:border-accent"
+              >
+                <p className="font-display text-lg font-bold">{project.title}</p>
+                <p className="mt-2 text-sm text-text-muted">{project.description}</p>
+              </Link>
+            ),
+          )}
         </div>
       </Section>
     </>

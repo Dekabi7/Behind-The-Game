@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { digitalLandscapeContent } from "@/lib/content";
+import { digitalLandscapeContent, pageIntros } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: pageIntros.digitalLandscape.title,
+  description: pageIntros.digitalLandscape.description,
+};
 
 export default function DigitalLandscapePage() {
   const { intro, platforms, communityImpact } = digitalLandscapeContent;

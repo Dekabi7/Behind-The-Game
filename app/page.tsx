@@ -29,12 +29,14 @@ export default function HomePage() {
             label="A student in a maroon and brown varsity jacket sits at the edge of the stage, listening as panelists speak behind him."
             src="/images/events/howard-01.jpg"
             aspect="aspect-[3/4]"
+            sizes="(min-width: 1024px) 260px, 45vw"
           />
           <PlaceholderImage
             label="A student in a varsity jacket with 'Community Fashion Inspiration' and 'Dreams of Triumph' patches, smiling toward the camera."
             src="/images/events/howard-03.jpg"
             aspect="aspect-[3/4]"
             className="mt-8"
+            sizes="(min-width: 1024px) 260px, 45vw"
           />
           <div className="col-span-2 border border-border bg-surface p-6">
             <span className="eyebrow text-accent">{hero.recap.meta}</span>
@@ -84,6 +86,7 @@ export default function HomePage() {
           label="Two attendees in conversation near a brick wall during the Howard University symposium."
           src="/images/events/howard-02.jpg"
           aspect="aspect-video"
+          sizes="(min-width: 1024px) 50vw, 100vw"
         />
       </Section>
 
