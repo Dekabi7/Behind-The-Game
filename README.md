@@ -4,7 +4,7 @@ Custom rebuild of [behindthegame.com](https://behindthegame.com), replacing the 
 
 Behind the Game is a sports business and consulting organization connecting underserved students and student-athletes — particularly at HBCUs — to opportunities across the global sports industry.
 
-**Status:** In development · Target launch Aug 5, 2026
+**Status:** In development · Target launch Sept 16, 2026
 
 ---
 
@@ -60,18 +60,19 @@ All six routes are stubbed and live behind the shared nav/footer as of Day 1. Fu
 
 ## Design system
 
-Editorial black, white, and red. Near-black backgrounds with heavy white grotesque headlines and a single red accent used sparingly.
+Editorial maroon, gold, and near-black, matching the real logo (updated Sept 3 — the original spec called for a red accent before the logo existed; see `docs/build-plan.md` Day 3). Warm near-black backgrounds with heavy cream/white grotesque headlines.
 
 ```
---color-bg          #0A0A0A
---color-surface     #161616
---color-border      #2B2B2B
---color-text        #FFFFFF
---color-text-muted  #9A9A9A
---color-accent      #E7202B
+--color-bg            #100D0C
+--color-surface       #1C1210
+--color-border        #33221E
+--color-text          #F5F0E8
+--color-text-muted    #A89A8C
+--color-accent        #D9A94F  (gold — text, borders, small caps labels, thin/interactive elements)
+--color-accent-strong #7A1F35  (maroon — solid fills only: primary CTA buttons, filled pills)
 ```
 
-Red is an accent, not a fill — borders, small caps labels, and single interactive elements. Watch contrast on red-on-black text; use it at 13px+ and check against WCAG AA before shipping.
+Two accent roles, not one: gold is the thin/text role red used to play (it has the luminance to read on near-black); maroon is a dark color, so it's reserved for solid fills where a light label sits on top of it. Watch contrast on the gold accent; use it at 13px+ and check against WCAG AA before shipping.
 
 Headline typeface: Archivo (weights 700/900) as a placeholder pending license confirmation — see Open Decisions. Body: Inter.
 
@@ -101,7 +102,7 @@ image: "/images/articles/slug.jpg"
 
 Events are data-driven in `lib/events.ts` — adding an event should be a data entry, never a layout rebuild.
 
-Site copy, nav links, and per-page intros live in `lib/content.ts` as a single source of truth. Everything in there is placeholder until the client content drop on Jul 31.
+Site copy, nav links, and per-page intros live in `lib/content.ts` as a single source of truth. Everything in there is placeholder until the client content drop, scheduled for content integration (see [`docs/build-plan.md`](docs/build-plan.md)).
 
 ---
 
@@ -109,7 +110,7 @@ Site copy, nav links, and per-page intros live in `lib/content.ts` as a single s
 
 Pushes to `main` deploy to production via Vercel. All other branches get preview URLs.
 
-Domain is currently registered through Wix. Per the execution plan, launch does **not** require a registrar transfer — only repointing DNS (A record + CNAME) from Wix to Vercel, done on Day 7.
+Domain is currently registered through Wix. Per the execution plan, launch does **not** require a registrar transfer — only repointing DNS (A record + CNAME) from Wix to Vercel (see [`docs/build-plan.md`](docs/build-plan.md) for the current date).
 
 ## Branching
 
@@ -127,11 +128,11 @@ Commit style: `feat:`, `fix:`, `style:`, `content:`, `chore:`
 
 ## Assets needed from client
 
-- [ ] Logo files (SVG or high-res PNG)
-- [ ] Howard pilot photography
+- [x] Logo files — received Sept 3 (`FullLogo 2.png`)
+- [x] Howard + Maryland event photography — received Sept 2
 - [ ] Headshots and bios
 - [ ] Final copy for all six pages
-- [ ] Maryland event details
+- [x] Maryland event details — date/location/partner confirmed via the event poster (May 1, 2026, Gossett Hall/Glazer Auditorium, w/ Minorities in Sports)
 - [ ] Wix DNS panel access (for the A record / CNAME repoint — no registrar transfer needed)
 
 ---
