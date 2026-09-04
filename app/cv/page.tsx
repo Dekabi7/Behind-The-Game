@@ -40,7 +40,7 @@ export default function CvPage() {
         <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
           Selected Work
         </h2>
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <Link
               key={project.title}

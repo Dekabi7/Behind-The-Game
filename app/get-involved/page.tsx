@@ -16,7 +16,7 @@ export default function GetInvolvedPage() {
       </Section>
 
       <Section className="border-t border-border py-20">
-        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {benefits.map((benefit) => (
             <div key={benefit.title} className="border border-border p-6">
               <p className="font-display text-lg font-bold">{benefit.title}</p>
