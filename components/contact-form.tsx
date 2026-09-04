@@ -48,7 +48,7 @@ export function ContactForm() {
               aria-pressed={role === option}
               className={`border px-4 py-2 text-sm font-medium transition-colors ${
                 role === option
-                  ? "border-accent bg-accent text-black"
+                  ? "border-accent bg-accent-strong text-text"
                   : "border-border text-text-muted hover:border-accent hover:text-text"
               }`}
             >
@@ -102,7 +102,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="inline-flex items-center gap-2 bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-wide text-text transition-opacity hover:opacity-90 disabled:opacity-50"
+        className="inline-flex items-center gap-2 bg-accent-strong px-8 py-4 text-sm font-semibold uppercase tracking-wide text-text transition-opacity hover:opacity-90 disabled:opacity-50"
       >
         {state.submitting ? "Sending…" : "Submit"}
       </button>

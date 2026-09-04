@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import { PlaceholderImage } from "@/components/placeholder-image";
@@ -17,15 +18,24 @@ export default function HomePage() {
           <p className="mt-6 max-w-md text-lg text-text-muted">{hero.description}</p>
           <Link
             href={hero.ctaHref}
-            className="mt-8 inline-flex items-center gap-2 border border-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition-colors hover:bg-accent hover:text-text"
+            className="mt-8 inline-flex items-center gap-2 border border-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition-colors hover:bg-accent-strong hover:text-text"
           >
             {hero.ctaLabel}
           </Link>
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <PlaceholderImage label="Howard pilot photo" aspect="aspect-[3/4]" />
-          <PlaceholderImage label="BTG photo" aspect="aspect-[3/4]" className="mt-8" />
+          <PlaceholderImage
+            label="A student in a maroon and brown varsity jacket sits at the edge of the stage, listening as panelists speak behind him."
+            src="/images/events/howard-01.jpg"
+            aspect="aspect-[3/4]"
+          />
+          <PlaceholderImage
+            label="A student in a varsity jacket with 'Community Fashion Inspiration' and 'Dreams of Triumph' patches, smiling toward the camera."
+            src="/images/events/howard-03.jpg"
+            aspect="aspect-[3/4]"
+            className="mt-8"
+          />
           <div className="col-span-2 border border-border bg-surface p-6">
             <span className="eyebrow text-accent">{hero.recap.meta}</span>
             <p className="mt-2 font-display text-xl font-bold">{hero.recap.title}</p>
@@ -36,9 +46,7 @@ export default function HomePage() {
 
       <Section className="grid gap-12 border-t border-border py-20 lg:grid-cols-2 lg:items-center">
         <div className="order-2 flex items-center justify-center border border-border bg-surface p-10 lg:order-1">
-          <p className="font-display text-2xl font-black tracking-tight">
-            BEHIND THE GAME<span className="text-accent">.</span>
-          </p>
+          <Image src="/images/logo.png" alt="Behind the Game" width={483} height={501} className="h-40 w-auto" />
         </div>
         <div className="order-1 lg:order-2">
           <span className="eyebrow text-accent">{mission.eyebrow}</span>
@@ -72,7 +80,11 @@ export default function HomePage() {
           </h2>
           <p className="mt-6 text-lg text-text-muted">{pilot.body}</p>
         </div>
-        <PlaceholderImage label="Howard pilot recap photo" aspect="aspect-video" />
+        <PlaceholderImage
+          label="Two attendees in conversation near a brick wall during the Howard University symposium."
+          src="/images/events/howard-02.jpg"
+          aspect="aspect-video"
+        />
       </Section>
 
       <Section className="border-t border-border py-20 text-center">
@@ -82,7 +94,7 @@ export default function HomePage() {
         </h2>
         <Link
           href={cta.ctaHref}
-          className="mt-8 inline-flex items-center gap-2 bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-wide text-text transition-opacity hover:opacity-90"
+          className="mt-8 inline-flex items-center gap-2 bg-accent-strong px-8 py-4 text-sm font-semibold uppercase tracking-wide text-text transition-opacity hover:opacity-90"
         >
           {cta.ctaLabel}
         </Link>

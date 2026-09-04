@@ -26,8 +26,9 @@ export const footerContent = {
     href: "/get-involved",
   },
   socials: [
-    { label: "Instagram", href: "#" },
-    { label: "LinkedIn", href: "#" },
+    { label: "Instagram", href: "https://www.instagram.com/behindthegame.0/" },
+    { label: "TikTok", href: "https://www.tiktok.com/@behindthegame01" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/behindthegame-1-b84a7342a/" },
     { label: "YouTube", href: "#" },
   ],
 };
@@ -43,7 +44,7 @@ export const pageIntros: Record<string, PageIntro> = {
     eyebrow: "Sports Business & Consulting",
     title: "Behind the Game",
     description:
-      "Placeholder hero copy — real copy lands Fri Jul 31. Connecting underserved students and student-athletes, particularly at HBCUs, to opportunities across the global sports industry.",
+      "Placeholder hero copy — real copy lands during content integration. Connecting underserved students and student-athletes, particularly at HBCUs, to opportunities across the global sports industry.",
   },
   digitalLandscape: {
     eyebrow: "Digital Landscape",
@@ -81,15 +82,15 @@ export const homeContent = {
     ctaLabel: "View the Collection",
     ctaHref: "/events",
     recap: {
-      meta: "Howard University — March 2026",
+      meta: "Howard University — Feb 26, 2026",
       title: "Pilot Recap",
-      body: "Placeholder recap card copy — real copy and photography land Fri Jul 31.",
+      body: "Placeholder recap card copy — real copy lands during content integration.",
     },
   },
   mission: {
     eyebrow: "Our Story",
     title: "Who We Are",
-    body: "Placeholder mission copy — real copy lands Fri Jul 31.",
+    body: "Placeholder mission copy — real copy lands during content integration.",
   },
   programs: [
     { name: "Program One", description: "Placeholder program description." },
@@ -100,8 +101,8 @@ export const homeContent = {
   ],
   pilot: {
     eyebrow: "Pilot Highlight",
-    title: "Howard University, March 2026",
-    body: "Placeholder recap of the Howard pilot program — real copy and photography land Fri Jul 31.",
+    title: "Howard University, Feb 26, 2026",
+    body: "Placeholder recap of the Howard pilot program — real copy lands during content integration.",
   },
   cta: {
     eyebrow: "Get Involved",
@@ -115,29 +116,34 @@ export const digitalLandscapeContent = {
   intro: {
     eyebrow: "Digital Landscape",
     title: "Our Digital Presence",
-    body: "Placeholder philosophy copy — real copy lands Fri Jul 31. How Behind the Game shows up across platforms, and how the content ecosystem serves the mission.",
+    body: "Placeholder philosophy copy — real copy lands during content integration. How Behind the Game shows up across platforms, and how the content ecosystem serves the mission.",
   },
   platforms: [
     {
       name: "Instagram",
-      href: "#",
-      description: "Placeholder platform description — real copy and URL land Fri Jul 31.",
+      href: "https://www.instagram.com/behindthegame.0/",
+      description: "Placeholder platform description — real copy lands during content integration.",
+    },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@behindthegame01",
+      description: "Placeholder platform description — real copy lands during content integration.",
     },
     {
       name: "LinkedIn",
-      href: "#",
-      description: "Placeholder platform description — real copy and URL land Fri Jul 31.",
+      href: "https://www.linkedin.com/in/behindthegame-1-b84a7342a/",
+      description: "Placeholder platform description — real copy lands during content integration.",
     },
     {
       name: "YouTube",
       href: "#",
-      description: "Placeholder platform description — real copy and URL land Fri Jul 31.",
+      description: "Placeholder platform description — real copy and URL land during content integration.",
     },
   ],
   communityImpact: {
     eyebrow: "Community Impact",
     title: "Built With the Community",
-    body: "Placeholder community impact copy — real copy lands Fri Jul 31.",
+    body: "Placeholder community impact copy — real copy lands during content integration.",
   },
 };
 
@@ -145,13 +151,13 @@ export const eventsContent = {
   hero: {
     eyebrow: "Symposium Series",
     title: "Moments Mean Everything",
-    body: "Placeholder recap copy — real copy lands Fri Jul 31.",
+    body: "Placeholder recap copy — real copy lands during content integration.",
   },
-  highlightsLabel: "Past Event Highlights",
   cta: {
-    eyebrow: "Up Next",
-    title: "Join the Next Game",
-    ctaLabel: "Join the Next Game",
+    eyebrow: "What's Next",
+    title: "Be Part of the Next One",
+    body: "No symposium is on the calendar yet — get involved and be the first to hear when the next one is announced.",
+    ctaLabel: "Get Involved",
     ctaHref: "/get-involved",
   },
 };
@@ -160,7 +166,7 @@ export const getInvolvedContent = {
   hero: {
     eyebrow: "Get Involved",
     title: "Power the Future of Sports",
-    body: "Placeholder copy — real copy lands Fri Jul 31. For brands, students, and partners looking to work with Behind the Game.",
+    body: "Placeholder copy — real copy lands during content integration. For brands, students, and partners looking to work with Behind the Game.",
   },
   roles: ["Speaker", "Brand Partner", "Student"] as const,
   focusAreas: [
@@ -171,21 +177,21 @@ export const getInvolvedContent = {
     "Other",
   ],
   benefits: [
-    { title: "Benefit One", description: "Placeholder benefit description — real copy lands Fri Jul 31." },
-    { title: "Benefit Two", description: "Placeholder benefit description — real copy lands Fri Jul 31." },
-    { title: "Benefit Three", description: "Placeholder benefit description — real copy lands Fri Jul 31." },
+    { title: "Benefit One", description: "Placeholder benefit description — real copy lands during content integration." },
+    { title: "Benefit Two", description: "Placeholder benefit description — real copy lands during content integration." },
+    { title: "Benefit Three", description: "Placeholder benefit description — real copy lands during content integration." },
   ],
 };
 
 export const cvContent = {
   intro: {
     eyebrow: "Founder",
-    body: "Placeholder bio copy — real copy lands Fri Jul 31.",
+    body: "Placeholder bio copy — real copy lands during content integration.",
   },
   name: "Daud Gantt-Bay",
   role: "Founder, Behind the Game",
   linkedinHref: "https://www.linkedin.com/in/daud-gantt-bey-m-s-487058195/",
-  email: "placeholder@behindthegame.com",
+  email: "behindthegame@gmail.com",
   projects: [
     { title: "CBA Project", description: "Placeholder project description.", href: "#" },
     { title: "Data Visualizations", description: "Placeholder project description.", href: "#" },

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Section } from "@/components/section";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { digitalLandscapeContent } from "@/lib/content";
@@ -24,17 +23,25 @@ export default function DigitalLandscapePage() {
         <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">
           Platforms
         </h2>
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {platforms.map((platform) => (
             <div key={platform.name} className="border border-border p-6">
               <p className="font-display text-lg font-bold">{platform.name}</p>
               <p className="mt-2 text-sm text-text-muted">{platform.description}</p>
-              <Link
-                href={platform.href}
-                className="mt-4 inline-block text-sm font-semibold uppercase tracking-wide text-accent transition-colors hover:text-text"
-              >
-                Visit Platform →
-              </Link>
+              {platform.href === "#" ? (
+                <span className="mt-4 inline-block text-sm font-semibold uppercase tracking-wide text-text-muted">
+                  Coming Soon
+                </span>
+              ) : (
+                <a
+                  href={platform.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block text-sm font-semibold uppercase tracking-wide text-accent transition-colors hover:text-text"
+                >
+                  Visit Platform →
+                </a>
+              )}
             </div>
           ))}
         </div>

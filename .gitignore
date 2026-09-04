@@ -50,3 +50,9 @@ next-env.d.ts
 # design working files
 *.fig
 /design-exports
+
+# raw client asset drops (optimized copies live in /public)
+/Images
+
+# scratch files (design previews, etc.) — not part of the site
+/.scratch

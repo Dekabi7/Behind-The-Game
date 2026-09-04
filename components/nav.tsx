@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -20,12 +21,12 @@ export function Nav() {
 
   return (
     <header className="border-b border-border">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-5 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:px-8">
-        <Link href="/" className="font-display text-lg font-black tracking-tight">
-          BEHIND THE GAME<span className="text-accent">.</span>
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-5 sm:px-8 md:grid md:grid-cols-[1fr_auto_1fr]">
+        <Link href="/" className="flex items-center" aria-label="Behind the Game — home">
+          <Image src="/images/logo.png" alt="Behind the Game" width={483} height={501} className="h-10 w-auto" priority />
         </Link>
 
-        <nav className="col-start-2 hidden items-center justify-center gap-8 whitespace-nowrap sm:flex">
+        <nav className="col-start-2 hidden items-center justify-center gap-8 whitespace-nowrap md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -45,14 +46,14 @@ export function Nav() {
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="col-start-3 justify-self-end text-text sm:hidden"
+          className="col-start-3 justify-self-end text-text md:hidden"
         >
           {open ? <CloseIcon /> : <MenuIcon />}
         </button>
       </div>
 
       {open && (
-        <nav id="mobile-nav" className="flex flex-col border-t border-border px-6 py-2 sm:hidden">
+        <nav id="mobile-nav" className="flex flex-col border-t border-border px-6 py-2 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
