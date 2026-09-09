@@ -28,7 +28,7 @@ export const footerContent = {
     { label: "Instagram", href: "https://www.instagram.com/behindthegame.0/" },
     { label: "TikTok", href: "https://www.tiktok.com/@behindthegame01" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/behindthegame-1-b84a7342a/" },
-    { label: "YouTube", href: "#" },
+    { label: "YouTube", href: "https://www.youtube.com/@BehindtheGame01" },
   ],
 };
 
@@ -135,8 +135,8 @@ export const digitalLandscapeContent = {
     },
     {
       name: "YouTube",
-      href: "#",
-      description: "Placeholder platform description — real copy and URL land during content integration.",
+      href: "https://www.youtube.com/@BehindtheGame01",
+      description: "Placeholder platform description — real copy lands during content integration.",
     },
   ],
   communityImpact: {
