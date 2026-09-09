@@ -91,6 +91,21 @@ export const homeContent = {
     title: "Who We Are",
     body: "Placeholder mission copy — real copy lands during content integration.",
   },
+  ecosystem: {
+    eyebrow: "How We Connect",
+    title: "Our Ecosystem",
+    body: "Connecting people, education, community, and industry.",
+    hub: {
+      name: "Behind the Game",
+      description: "A connector, educator, and opportunity platform.",
+    },
+    stakeholders: [
+      { name: "Colleges & Universities", value: "Education + talent" },
+      { name: "Industry Leaders", value: "Expertise + opportunity" },
+      { name: "Communities", value: "Participants + local impact" },
+      { name: "Nonprofits & Businesses", value: "Partnership + resources" },
+    ],
+  },
   programs: [
     { name: "Program One", description: "Placeholder program description." },
     { name: "Program Two", description: "Placeholder program description." },

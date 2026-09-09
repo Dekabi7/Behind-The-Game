@@ -5,7 +5,7 @@ import { PlaceholderImage } from "@/components/placeholder-image";
 import { homeContent } from "@/lib/content";
 
 export default function HomePage() {
-  const { hero, mission, programs, pilot, cta } = homeContent;
+  const { hero, mission, ecosystem, programs, pilot, cta } = homeContent;
 
   return (
     <>
@@ -56,6 +56,30 @@ export default function HomePage() {
             {mission.title}
           </h2>
           <p className="mt-6 text-lg text-text-muted">{mission.body}</p>
+        </div>
+      </Section>
+
+      <Section className="border-t border-border py-20">
+        <span className="eyebrow text-accent">{ecosystem.eyebrow}</span>
+        <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+          {ecosystem.title}
+        </h2>
+        <p className="mt-4 max-w-xl text-lg text-text-muted">{ecosystem.body}</p>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3 lg:grid-rows-2">
+          <div className="border border-accent bg-accent-strong p-6 text-text lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:flex lg:flex-col lg:justify-center">
+            <p className="font-display text-lg font-bold">{ecosystem.hub.name}</p>
+            <p className="mt-2">{ecosystem.hub.description}</p>
+          </div>
+          {ecosystem.stakeholders.map((stakeholder, index) => {
+            const rowClass = index < 2 ? "lg:row-start-1" : "lg:row-start-2";
+            const colClass = index % 2 === 0 ? "lg:col-start-1" : "lg:col-start-3";
+            return (
+              <div key={stakeholder.name} className={`border border-border p-6 ${rowClass} ${colClass}`}>
+                <p className="font-display text-lg font-bold">{stakeholder.name}</p>
+                <p className="mt-2 text-text-muted">{stakeholder.value}</p>
+              </div>
+            );
+          })}
         </div>
       </Section>
 
