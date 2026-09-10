@@ -6,7 +6,7 @@ import { cvContent } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: cvContent.name,
-  description: cvContent.intro.body,
+  description: cvContent.intro.body[0],
 };
 
 export default function CvPage() {
@@ -15,7 +15,12 @@ export default function CvPage() {
   return (
     <>
       <Section className="grid gap-12 py-16 sm:py-24 lg:grid-cols-[280px_1fr] lg:items-start">
-        <PlaceholderImage label="Founder photo" aspect="aspect-[4/5]" />
+        <PlaceholderImage
+          label="Portrait of Daud Gantt-Bey, Founder of Behind the Game"
+          src="/images/daud-portrait.jpg"
+          aspect="aspect-[4/5]"
+          sizes="(min-width: 1024px) 280px, 100vw"
+        />
 
         <div>
           <span className="eyebrow text-accent">{intro.eyebrow}</span>
@@ -23,7 +28,11 @@ export default function CvPage() {
             {name}
           </h1>
           <p className="mt-2 text-text-muted">{role}</p>
-          <p className="mt-6 max-w-2xl text-lg text-text-muted">{intro.body}</p>
+          <div className="mt-6 max-w-2xl space-y-4 text-lg text-text-muted">
+            {intro.body.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+            ))}
+          </div>
 
           <div className="mt-6 flex flex-wrap gap-6 text-sm font-semibold uppercase tracking-wide">
             <Link

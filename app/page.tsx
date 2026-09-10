@@ -5,7 +5,7 @@ import { PlaceholderImage } from "@/components/placeholder-image";
 import { homeContent } from "@/lib/content";
 
 export default function HomePage() {
-  const { hero, mission, ecosystem, programs, pilot, cta } = homeContent;
+  const { hero, vision, mission, ecosystem, programs, pilot, cta } = homeContent;
 
   return (
     <>
@@ -51,11 +51,24 @@ export default function HomePage() {
           <Image src="/images/logo.png" alt="Behind the Game" width={483} height={501} className="h-40 w-auto" />
         </div>
         <div className="order-1 lg:order-2">
-          <span className="eyebrow text-accent">{mission.eyebrow}</span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            {mission.title}
-          </h2>
-          <p className="mt-6 text-lg text-text-muted">{mission.body}</p>
+          <span className="eyebrow text-accent">{vision.eyebrow}</span>
+          <p className="mt-4 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+            {vision.statement}
+          </p>
+        </div>
+      </Section>
+
+      <Section className="border-t border-border py-20">
+        <span className="eyebrow text-accent">{mission.eyebrow}</span>
+        <p className="mt-4 max-w-3xl font-display text-xl font-bold tracking-tight sm:text-2xl">
+          {mission.statement}
+        </p>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {mission.pillars.map((pillar) => (
+            <div key={pillar} className="border border-border p-6">
+              <p className="text-text-muted">{pillar}</p>
+            </div>
+          ))}
         </div>
       </Section>
 

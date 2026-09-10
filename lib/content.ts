@@ -86,10 +86,21 @@ export const homeContent = {
       body: "Placeholder recap card copy — real copy lands during content integration.",
     },
   },
+  vision: {
+    eyebrow: "Our Vision",
+    statement:
+      "A future where underserved and diverse communities have equitable pathways to lead, innovate, and thrive through opportunities in sports, education, technology, entrepreneurship, and related industries.",
+  },
   mission: {
-    eyebrow: "Our Story",
-    title: "Who We Are",
-    body: "Placeholder mission copy — real copy lands during content integration.",
+    eyebrow: "Our Mission",
+    statement:
+      "To educate, empower, and connect underserved and marginalized communities with educational, leadership, mentorship, and career opportunities in sports and related fields.",
+    pillars: [
+      "Education & experiential learning",
+      "Mentorship & leadership development",
+      "Career readiness & workforce development",
+      "Innovation, entrepreneurship & community partnerships",
+    ],
   },
   ecosystem: {
     eyebrow: "How We Connect",
@@ -200,9 +211,14 @@ export const getInvolvedContent = {
 export const cvContent = {
   intro: {
     eyebrow: "Founder",
-    body: "Placeholder bio copy — real copy lands during content integration.",
+    body: [
+      "Daud Gantt-Bey is the Founder of Behind the Game Foundation, an organization dedicated to expanding access to careers in the sports industry by connecting students with professionals, mentorship, and meaningful opportunities. Through innovative programming and strategic partnerships, Daud is committed to building pathways that empower the next generation of sports leaders.",
+      "A graduate of Hampton University with a bachelor's degree and American University with a master's degree, Daud combines his passion for sports, business, and community engagement to create experiences that inspire career exploration and professional growth. His work centers on community building, innovation, and fostering authentic relationships that drive lasting impact.",
+      "Whether organizing career exposure events, developing strategic partnerships, or creating spaces where students can connect directly with industry leaders, Daud believes meaningful change begins with access, collaboration, and opportunity. His mission is to bridge the gap between talent and the sports industry by transforming curiosity into careers and building ecosystems where individuals and organizations can thrive together.",
+      "Driven by creativity and a passion for service, Daud continues to champion initiatives that challenge traditional pathways, strengthen communities, and create opportunities that extend far beyond the game.",
+    ],
   },
-  name: "Daud Gantt-Bay",
+  name: "Daud Gantt-Bey",
   role: "Founder, Behind the Game",
   linkedinHref: "https://www.linkedin.com/in/daud-gantt-bey-m-s-487058195/",
   email: "behindthegame@gmail.com",
