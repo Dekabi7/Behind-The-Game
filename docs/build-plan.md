@@ -9,7 +9,7 @@ Source of truth for the build. Originally a fixed 9-day sprint (Jul 27 – Aug 5
 - **Platform:** Next.js + Tailwind + Vercel
 - **Forms:** Formspree
 - **Articles:** MDX (no Sanity) — done, see Day 1 below
-- **Domain:** repoint DNS (A record + CNAME) — no registrar transfer (a full transfer off Wix takes 5–7 days; registrar move happens after launch — see Post-launch)
+- **Domain:** changed Sept 14 — plan was to repoint DNS on the existing Wix-registered domain (no registrar transfer). Instead Noah secured a new domain directly: **behind-the-game.com** (hyphenated, matching the Vercel project / GitHub repo naming — not `behindthegame.com`, which is what the codebase had assumed throughout). `BRAND_DOMAIN` in `lib/site-url.ts` updated to match — this constant drives the noindex-until-launch logic in `proxy.ts`/`app/robots.ts`, so it had to be exactly right or the site would have silently stayed noindexed forever post-launch.
 - **Design system:** updated Sept 3 — the real logo landed (maroon/gold, not the MVP spec's red/black); accent recolored to match (see Day 3)
 - **Structure:** six pages confirmed
 
