@@ -1,11 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Panelist } from "@/lib/events";
+
+const AUTO_HIDE_MS = 3000;
 
 export function PanelistCard({ panelist }: { panelist: Panelist }) {
   const [revealed, setRevealed] = useState(false);
+
+  // Tapping opens the headshot on mobile (no hover to close it), so auto-hide
+  // it after a few seconds instead of leaving it up until the next tap.
+  useEffect(() => {
+    if (!revealed) return;
+    const timer = setTimeout(() => setRevealed(false), AUTO_HIDE_MS);
+    return () => clearTimeout(timer);
+  }, [revealed]);
 
   return (
     <div
