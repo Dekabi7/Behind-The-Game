@@ -50,6 +50,20 @@ export default function EventsPage() {
               />
             </Section>
 
+            {event.panelists && (
+              <Section className="border-t border-border py-16">
+                <span className="eyebrow text-accent">Panelists</span>
+                <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {event.panelists.map((panelist) => (
+                    <div key={panelist.name} className="border border-border p-6">
+                      <p className="font-display text-lg font-bold">{panelist.name}</p>
+                      <p className="mt-2 text-sm text-text-muted">{panelist.title}</p>
+                    </div>
+                  ))}
+                </div>
+              </Section>
+            )}
+
             {event.images.length > 1 && (
               <div className="grid grid-cols-1 border-t border-border sm:grid-cols-2">
                 {event.images.slice(1, 3).map((image) => (

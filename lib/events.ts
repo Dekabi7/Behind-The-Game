@@ -8,6 +8,11 @@ export type EventImage = {
   objectPosition?: string;
 };
 
+export type Panelist = {
+  name: string;
+  title: string;
+};
+
 export type SiteEvent = {
   slug: string;
   name: string;
@@ -17,6 +22,7 @@ export type SiteEvent = {
   partner?: string;
   summary: string;
   images: EventImage[];
+  panelists?: Panelist[];
 };
 
 export const events: SiteEvent[] = [
@@ -55,6 +61,14 @@ export const events: SiteEvent[] = [
     partner: "Minorities in Sports, University of Maryland Chapter",
     summary:
       "Placeholder recap copy — real copy lands during content integration. A career panel connecting students directly with professionals across the sports industry.",
+    panelists: [
+      { name: "Shaun Scott", title: "Sports Marketing Manager, Under Armour Grassroots Basketball" },
+      { name: "Andrea Richardson", title: "Sr. Program Manager at The Trust (powered by the NFLPA)" },
+      { name: "Jeffrey Oguamanam", title: "Sr. Lead: Diversity Equity and Inclusion, Under Armour" },
+      { name: "Nicole Mahzoun", title: "Sr. Manager, Player Affairs at NFL Players Association" },
+      { name: "Destiny May", title: "HR Specialist, NFL Players Association" },
+      { name: "Anthony Johnson", title: "Sports Agent, Renaissance Sports Group" },
+    ],
     images: [
       {
         src: "/images/events/maryland-01.jpg",
