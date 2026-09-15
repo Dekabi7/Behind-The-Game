@@ -6,6 +6,10 @@ export type EventImage = {
   /** CSS object-position. Only needed when the default center crop cuts off
    * the subject — e.g. a portrait photo forced into a wide aspect ratio. */
   objectPosition?: string;
+  /** Highlight-strip aspect ratio override. Defaults to aspect-[21/9] (a
+   * wide strip, meant for landscape photos) — set this when a highlight
+   * image is a different shape, e.g. a portrait graphic. */
+  aspect?: string;
 };
 
 export type Panelist = {
@@ -64,12 +68,9 @@ export const events: SiteEvent[] = [
         alt: "The \"Navigating the Industry\" career panel underway in a University of Maryland auditorium, with panelist headshots projected on screen.",
       },
       {
-        src: "/images/events/maryland-panelists.jpg",
-        alt: "Panelists standing and talking near the stage after the \"Navigating the Industry\" panel.",
-      },
-      {
-        src: "/images/events/maryland-02.jpg",
-        alt: "A wide view of the University of Maryland auditorium during the panel, with Terrapins branding on the walls.",
+        src: "/images/events/maryland-panelist-poster.jpg",
+        alt: "\"Meet the Panelists\" graphic for Navigating the Industry, with headshots and titles for all six panelists.",
+        aspect: "aspect-[4/5]",
       },
     ],
   },

@@ -65,14 +65,18 @@ export default function EventsPage() {
             )}
 
             {event.images.length > 1 && (
-              <div className="grid grid-cols-1 border-t border-border sm:grid-cols-2">
+              <div
+                className={`grid grid-cols-1 border-t border-border ${
+                  event.images.length > 2 ? "sm:grid-cols-2" : ""
+                }`}
+              >
                 {event.images.slice(1, 3).map((image) => (
                   <PlaceholderImage
                     key={image.src}
                     label={image.alt}
                     src={image.src}
-                    aspect="aspect-[21/9]"
-                    sizes="(min-width: 640px) 50vw, 100vw"
+                    aspect={image.aspect ?? "aspect-[21/9]"}
+                    sizes={event.images.length > 2 ? "(min-width: 640px) 50vw, 100vw" : "100vw"}
                     objectPosition={image.objectPosition}
                   />
                 ))}
