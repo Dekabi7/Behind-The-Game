@@ -53,7 +53,7 @@ export default function EventsPage() {
 
             {event.panelists && (
               <Section className="border-t border-border py-16">
-                <span className="eyebrow text-accent">Panelists</span>
+                <span className="eyebrow text-accent">Previous Panelists</span>
                 <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {event.panelists.map((panelist) => (
                     <div key={panelist.name} className="group relative border border-border p-6">

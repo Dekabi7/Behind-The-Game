@@ -92,11 +92,6 @@ export const events: SiteEvent[] = [
         src: "/images/events/maryland-01.jpg",
         alt: "The \"Navigating the Industry\" career panel underway in a University of Maryland auditorium, with panelist headshots projected on screen.",
       },
-      {
-        src: "/images/events/maryland-panelist-poster.jpg",
-        alt: "\"Meet the Panelists\" graphic for Navigating the Industry, with headshots and titles for all six panelists.",
-        aspect: "aspect-[4/5]",
-      },
     ],
   },
 ];
