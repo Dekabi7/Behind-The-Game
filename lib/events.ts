@@ -39,17 +39,6 @@ export const events: SiteEvent[] = [
         src: "/images/events/howard-01.jpg",
         alt: "A student in a maroon and brown varsity jacket sits at the edge of the stage, listening as panelists speak behind him.",
       },
-      {
-        src: "/images/events/howard-02.jpg",
-        alt: "Two attendees in conversation near a brick wall during the symposium.",
-      },
-      {
-        src: "/images/events/howard-03.jpg",
-        alt: "A student in a varsity jacket with 'Community Fashion Inspiration' and 'Dreams of Triumph' patches, smiling toward the camera.",
-        // Portrait photo forced into a 21:9 strip — center-cropping lands on
-        // his hand mid-gesture and cuts his face off. Bias to the top instead.
-        objectPosition: "center 15%",
-      },
     ],
   },
   {
