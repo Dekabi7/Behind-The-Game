@@ -15,6 +15,7 @@ export type EventImage = {
 export type Panelist = {
   name: string;
   title: string;
+  image?: string;
 };
 
 export type SiteEvent = {
@@ -55,12 +56,36 @@ export const events: SiteEvent[] = [
     summary:
       "Placeholder recap copy — real copy lands during content integration. A career panel connecting students directly with professionals across the sports industry.",
     panelists: [
-      { name: "Shaun Scott", title: "Sports Marketing Manager, Under Armour Grassroots Basketball" },
-      { name: "Andrea Richardson", title: "Sr. Program Manager at The Trust (powered by the NFLPA)" },
-      { name: "Jeffrey Oguamanam", title: "Sr. Lead: Diversity Equity and Inclusion, Under Armour" },
-      { name: "Nicole Mahzoun", title: "Sr. Manager, Player Affairs at NFL Players Association" },
-      { name: "Destiny May", title: "HR Specialist, NFL Players Association" },
-      { name: "Anthony Johnson", title: "Sports Agent, Renaissance Sports Group" },
+      {
+        name: "Shaun Scott",
+        title: "Sports Marketing Manager, Under Armour Grassroots Basketball",
+        image: "/images/events/panelists/shaun-scott.jpg",
+      },
+      {
+        name: "Andrea Richardson",
+        title: "Sr. Program Manager at The Trust (powered by the NFLPA)",
+        image: "/images/events/panelists/andrea-richardson.jpg",
+      },
+      {
+        name: "Jeffrey Oguamanam",
+        title: "Sr. Lead: Diversity Equity and Inclusion, Under Armour",
+        image: "/images/events/panelists/jeffrey-oguamanam.jpg",
+      },
+      {
+        name: "Nicole Mahzoun",
+        title: "Sr. Manager, Player Affairs at NFL Players Association",
+        image: "/images/events/panelists/nicole-mahzoun.jpg",
+      },
+      {
+        name: "Destiny May",
+        title: "HR Specialist, NFL Players Association",
+        image: "/images/events/panelists/destiny-may.jpg",
+      },
+      {
+        name: "Anthony Johnson",
+        title: "Sports Agent, Renaissance Sports Group",
+        image: "/images/events/panelists/anthony-johnson.jpg",
+      },
     ],
     images: [
       {
