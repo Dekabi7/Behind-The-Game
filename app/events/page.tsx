@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import { PlaceholderImage } from "@/components/placeholder-image";
+import { PanelistCard } from "@/components/panelist-card";
 import { eventsContent, pageIntros } from "@/lib/content";
 import { events } from "@/lib/events";
 
@@ -56,17 +56,7 @@ export default function EventsPage() {
                 <span className="eyebrow text-accent">Previous Panelists</span>
                 <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {event.panelists.map((panelist) => (
-                    <div key={panelist.name} className="group relative border border-border p-6">
-                      {panelist.image && (
-                        <div className="pointer-events-none absolute inset-x-0 -top-4 z-10 flex -translate-y-full justify-center opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                          <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-accent bg-surface shadow-lg">
-                            <Image src={panelist.image} alt={panelist.name} fill sizes="128px" className="object-cover" />
-                          </div>
-                        </div>
-                      )}
-                      <p className="font-display text-lg font-bold">{panelist.name}</p>
-                      <p className="mt-2 text-sm text-text-muted">{panelist.title}</p>
-                    </div>
+                    <PanelistCard key={panelist.name} panelist={panelist} />
                   ))}
                 </div>
               </Section>
