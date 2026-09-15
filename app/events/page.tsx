@@ -59,6 +59,7 @@ export default function EventsPage() {
                     src={image.src}
                     aspect="aspect-[21/9]"
                     sizes="(min-width: 640px) 50vw, 100vw"
+                    objectPosition={image.objectPosition}
                   />
                 ))}
               </div>

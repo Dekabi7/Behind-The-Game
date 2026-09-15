@@ -3,6 +3,9 @@ export type EventStatus = "past" | "upcoming";
 export type EventImage = {
   src: string;
   alt: string;
+  /** CSS object-position. Only needed when the default center crop cuts off
+   * the subject — e.g. a portrait photo forced into a wide aspect ratio. */
+  objectPosition?: string;
 };
 
 export type SiteEvent = {
@@ -37,6 +40,9 @@ export const events: SiteEvent[] = [
       {
         src: "/images/events/howard-03.jpg",
         alt: "A student in a varsity jacket with 'Community Fashion Inspiration' and 'Dreams of Triumph' patches, smiling toward the camera.",
+        // Portrait photo forced into a 21:9 strip — center-cropping lands on
+        // his hand mid-gesture and cuts his face off. Bias to the top instead.
+        objectPosition: "center 15%",
       },
     ],
   },
