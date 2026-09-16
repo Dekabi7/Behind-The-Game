@@ -47,9 +47,9 @@ export const pageIntros: Record<string, PageIntro> = {
   },
   digitalLandscape: {
     eyebrow: "Digital Landscape",
-    title: "Our Digital Presence",
+    title: "Digital Landscape",
     description:
-      "Placeholder copy — where Behind the Game shows up across platforms, and how the content ecosystem serves the mission.",
+      "Follow Behind the Game on Instagram, TikTok, LinkedIn, and YouTube.",
   },
   events: {
     eyebrow: "Symposium Series",
@@ -134,41 +134,6 @@ export const homeContent = {
     title: "Power the Future of Sports",
     ctaLabel: "Get Involved",
     ctaHref: "/get-involved",
-  },
-};
-
-export const digitalLandscapeContent = {
-  intro: {
-    eyebrow: "Digital Landscape",
-    title: "Our Digital Presence",
-    body: "Placeholder philosophy copy — real copy lands during content integration. How Behind the Game shows up across platforms, and how the content ecosystem serves the mission.",
-  },
-  platforms: [
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/behindthegame.0/",
-      description: "Placeholder platform description — real copy lands during content integration.",
-    },
-    {
-      name: "TikTok",
-      href: "https://www.tiktok.com/@behindthegame01",
-      description: "Placeholder platform description — real copy lands during content integration.",
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/behindthegame-1-b84a7342a/",
-      description: "Placeholder platform description — real copy lands during content integration.",
-    },
-    {
-      name: "YouTube",
-      href: "https://www.youtube.com/@BehindtheGame01",
-      description: "Placeholder platform description — real copy lands during content integration.",
-    },
-  ],
-  communityImpact: {
-    eyebrow: "Community Impact",
-    title: "Built With the Community",
-    body: "Placeholder community impact copy — real copy lands during content integration.",
   },
 };
 
