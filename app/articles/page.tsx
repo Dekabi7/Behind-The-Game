@@ -21,7 +21,13 @@ export default function ArticlesPage() {
       <Section className="grid gap-x-8 gap-y-14 pb-24 sm:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => (
           <Link key={article.slug} href={`/articles/${article.slug}`} className="group block">
-            <PlaceholderImage label={article.frontmatter.title} aspect="aspect-[4/3]" />
+            <PlaceholderImage
+              label={article.frontmatter.title}
+              src={article.frontmatter.image}
+              aspect="aspect-[4/3]"
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              objectPosition={article.frontmatter.imagePosition}
+            />
             <span className="mt-4 block text-xs font-medium uppercase tracking-wide text-text-muted">
               {formatArticleDate(article.frontmatter.date)}
             </span>

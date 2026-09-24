@@ -73,7 +73,13 @@ export default async function ArticlePage({
       </Section>
 
       <div className="border-t border-border">
-        <PlaceholderImage label="Article hero image" aspect="aspect-[21/9]" />
+        <PlaceholderImage
+          label={article.frontmatter.title}
+          src={article.frontmatter.image}
+          aspect="aspect-[21/9]"
+          sizes="100vw"
+          objectPosition={article.frontmatter.imagePosition}
+        />
       </div>
 
       <Section className="max-w-3xl py-16">

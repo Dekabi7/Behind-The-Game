@@ -9,6 +9,8 @@ export type ArticleFrontmatter = {
   date: string;
   excerpt: string;
   image: string;
+  /** CSS object-position for the image, for shots that don't crop well from centre. */
+  imagePosition?: string;
 };
 
 export type Article = {
