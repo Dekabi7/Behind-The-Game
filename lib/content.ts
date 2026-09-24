@@ -186,7 +186,7 @@ export const cvContent = {
   name: "Daud Gantt-Bey",
   role: "Founder, Behind the Game",
   linkedinHref: "https://www.linkedin.com/in/daud-gantt-bey-m-s-487058195/",
-  email: "behindthegame@gmail.com",
+  email: "hbcusportstour@gmail.com",
   projects: [
     { title: "CBA Project", description: "Placeholder project description.", href: "#" },
     { title: "Data Visualizations", description: "Placeholder project description.", href: "#" },
