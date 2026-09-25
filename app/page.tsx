@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { HeroPhoto } from "@/components/hero-photo";
 import { homeContent } from "@/lib/content";
 
 export default function HomePage() {
@@ -26,18 +25,18 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <HeroPhoto
+          <PlaceholderImage
             label="A student in a maroon and brown varsity jacket sits at the edge of the stage, listening as panelists speak behind him."
             src="/images/events/howard-01.jpg"
+            aspect="aspect-[3/4]"
             sizes="(min-width: 1024px) 260px, 45vw"
           />
-          <HeroPhoto
+          <PlaceholderImage
             label="A student in a varsity jacket with 'Community Fashion Inspiration' and 'Dreams of Triumph' patches, smiling toward the camera."
             src="/images/events/howard-03.jpg"
-            sizes="(min-width: 1024px) 260px, 45vw"
+            aspect="aspect-[3/4]"
             className="mt-8"
-            delay={140}
-            reverse
+            sizes="(min-width: 1024px) 260px, 45vw"
           />
           <div className="col-span-2 border border-border bg-surface p-6">
             <span className="eyebrow text-accent">{hero.recap.meta}</span>
