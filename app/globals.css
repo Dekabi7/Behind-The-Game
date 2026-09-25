@@ -18,6 +18,16 @@
 @theme {
   --animate-float: float 5s ease-in-out infinite;
 
+  /* Hero photos: one entrance, then two perpetual motions that never share an
+     element — `rise` on the outer wrapper, `sway` on the middle, `pan` on the
+     <img> itself. Stacking two transform animations on one element would make
+     the later one silently win. */
+  --animate-rise: rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-sway: sway 9s ease-in-out infinite;
+  --animate-sway-alt: sway-alt 11s ease-in-out infinite;
+  --animate-pan: pan 22s ease-in-out infinite alternate;
+  --animate-pan-alt: pan-alt 26s ease-in-out infinite alternate;
+
   @keyframes float {
     0%,
     100% {
@@ -25,6 +35,60 @@
     }
     50% {
       transform: translateY(-7px);
+    }
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(32px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Counter-phase: one photo drifts up while the other drifts down, which reads
+     as parallax without any scroll listener. */
+  @keyframes sway {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  @keyframes sway-alt {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(12px);
+    }
+  }
+
+  /* Slow Ken Burns. Scale stays >= 1.08 so the translate can never expose an
+     edge: at 1.08 there is 4% of overflow per side and the drift peaks at
+     1.4% * 1.08 = 1.5%. */
+  @keyframes pan {
+    from {
+      transform: scale(1.08) translate3d(-1.4%, 1.2%, 0);
+    }
+    to {
+      transform: scale(1.16) translate3d(1.4%, -1.2%, 0);
+    }
+  }
+
+  @keyframes pan-alt {
+    from {
+      transform: scale(1.16) translate3d(1.4%, -1.2%, 0);
+    }
+    to {
+      transform: scale(1.08) translate3d(-1.4%, 1.2%, 0);
     }
   }
 }

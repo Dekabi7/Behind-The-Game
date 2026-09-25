@@ -5,6 +5,7 @@ export function PlaceholderImage({
   src,
   aspect = "aspect-[4/5]",
   className = "",
+  imageClassName = "",
   sizes = "(min-width: 1024px) 33vw, 100vw",
   objectPosition = "center",
 }: {
@@ -12,13 +13,22 @@ export function PlaceholderImage({
   src?: string;
   aspect?: string;
   className?: string;
+  /** Applied to the <Image> itself, for effects that must sit inside the frame. */
+  imageClassName?: string;
   sizes?: string;
   objectPosition?: string;
 }) {
   if (src) {
     return (
       <div className={`relative overflow-hidden border border-border bg-surface ${aspect} ${className}`}>
-        <Image src={src} alt={label} fill sizes={sizes} className="object-cover" style={{ objectPosition }} />
+        <Image
+          src={src}
+          alt={label}
+          fill
+          sizes={sizes}
+          className={`object-cover ${imageClassName}`}
+          style={{ objectPosition }}
+        />
       </div>
     );
   }
