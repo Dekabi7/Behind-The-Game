@@ -72,7 +72,7 @@ export const pageIntros: Record<string, PageIntro> = {
     eyebrow: "Get Involved",
     title: "Power the Future of Sports",
     description:
-      "Placeholder copy — for brands, students, and partners looking to work with Behind the Game.",
+      "Speak on a panel, partner with us as a brand, or join as a student. Help Behind the Game open doors to careers in sports for students at HBCUs and beyond.",
   },
 };
 
@@ -177,7 +177,7 @@ export const getInvolvedContent = {
   hero: {
     eyebrow: "Get Involved",
     title: "Power the Future of Sports",
-    body: "Placeholder copy — real copy lands during content integration. For brands, students, and partners looking to work with Behind the Game.",
+    body: "The next generation of sports leaders is already on campus. They just need someone to open the door. Whether you bring a story, a platform, or your own ambition, there's a place for you in the room.",
   },
   roles: ["Speaker", "Brand Partner", "Student"] as const,
   focusAreas: [
@@ -188,9 +188,21 @@ export const getInvolvedContent = {
     "Other",
   ],
   benefits: [
-    { title: "Benefit One", description: "Placeholder benefit description — real copy lands during content integration." },
-    { title: "Benefit Two", description: "Placeholder benefit description — real copy lands during content integration." },
-    { title: "Benefit Three", description: "Placeholder benefit description — real copy lands during content integration." },
+    {
+      title: "For Speakers",
+      description:
+        "Share how you got your start. One honest answer from someone who has done the job can change what a student believes is possible. Join a panel, lead a workshop, or mentor a student after the event ends.",
+    },
+    {
+      title: "For Brand Partners",
+      description:
+        "Meet driven, diverse talent before anyone else does. Sponsor a symposium, bring your team to campus, or open internship pathways for students who are ready to work.",
+    },
+    {
+      title: "For Students",
+      description:
+        "Get in the room with the people building careers in sports. Come to our events, ask the questions you rarely get to ask, and leave with names, contacts, and a next step.",
+    },
   ],
 };
 
