@@ -29,6 +29,7 @@ export const footerContent = {
     { label: "TikTok", href: "https://www.tiktok.com/@behindthegame01" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/behindthegame-1-b84a7342a/" },
     { label: "YouTube", href: "https://www.youtube.com/@BehindtheGame01" },
+    { label: "Discord", href: "https://discord.gg/pbPkw6NVX" },
   ],
 };
 
@@ -49,7 +50,7 @@ export const pageIntros: Record<string, PageIntro> = {
     eyebrow: "Digital Landscape",
     title: "Digital Landscape",
     description:
-      "Follow Behind the Game on Instagram, TikTok, LinkedIn, and YouTube.",
+      "Follow Behind the Game on Instagram, TikTok, LinkedIn, and YouTube, and join the conversation on Discord.",
   },
   events: {
     eyebrow: "Symposium Series",
