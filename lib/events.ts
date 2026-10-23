@@ -38,7 +38,7 @@ export const events: SiteEvent[] = [
     date: "February 26, 2026",
     location: "Howard University",
     summary:
-      "Placeholder recap copy — real copy lands during content integration. The pilot symposium that started it all.",
+      "Our pilot symposium, and the event that started it all. Students, student-athletes, and professionals gathered at Howard University for an open conversation about careers in sports, the paths people actually took, and how to start now.",
     images: [
       {
         src: "/images/events/howard-01.jpg",
@@ -54,7 +54,7 @@ export const events: SiteEvent[] = [
     location: "Gossett Hall, Glazer Auditorium — University of Maryland",
     partner: "Minorities in Sports, University of Maryland Chapter",
     summary:
-      "Placeholder recap copy — real copy lands during content integration. A career panel connecting students directly with professionals across the sports industry.",
+      "Hosted with Minorities in Sports, University of Maryland Chapter, in Gossett Hall's Glazer Auditorium. Panelists from Under Armour, the NFL Players Association, and Renaissance Sports Group walked students through their own career paths and answered questions on breaking in, building a network, and standing out. Students connected with the panelists directly and left with contacts they can follow up with.",
     panelists: [
       {
         name: "Shaun Scott",
@@ -91,6 +91,26 @@ export const events: SiteEvent[] = [
       {
         src: "/images/events/maryland-01.jpg",
         alt: "The \"Navigating the Industry\" career panel underway in a University of Maryland auditorium, with panelist headshots projected on screen.",
+      },
+    ],
+  },
+  {
+    slug: "bowie-state",
+    name: "Bowie State University",
+    status: "past",
+    date: "September 17, 2026, 11:00 AM to 3:00 PM",
+    location: "Bowie State University",
+    summary:
+      "Behind the Game brought its mission to Bowie State, another HBCU campus, for a four-hour afternoon with students. It was a chance to take what we learned at Howard and Maryland and test it with a new campus community.",
+    images: [
+      {
+        src: "/images/events/bowie-state-01.jpg",
+        alt: "Three people smile together in a classroom at Bowie State University during a Behind the Game event.",
+      },
+      {
+        src: "/images/events/bowie-state-02.jpg",
+        alt: "The \"Bulldog Nation\" mural with Bowie State's black-and-gold bulldog mascot on a hallway wall at Bowie State University.",
+        objectPosition: "center 40%",
       },
     ],
   },

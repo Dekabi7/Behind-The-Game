@@ -18,6 +18,17 @@ Note that `IMG_6731.jpeg` stores its orientation in EXIF (raw 4032x3024, portrai
 applied). Read phone photos through `ImageOps.exif_transpose` or equivalent, or they land on
 their side.
 
+## Events (Bowie State)
+
+| File | Original | Credit |
+| --- | --- | --- |
+| `events/bowie-state-01.jpg` | `Images/bowie-state-group.jpg` | Behind the Game |
+| `events/bowie-state-02.jpg` | `Images/bowie-state-wall.jpg` | Behind the Game |
+
+Both are iPhone shots with EXIF orientation 6, resized to 1600px wide (auto-rotated, EXIF
+stripped). `bowie-state-02` renders as the 21:9 highlight strip and needs
+`objectPosition: "center 40%"` to keep the mural in frame.
+
 ## Cropping
 
 Article images render twice: a 4:3 card on `/articles` and a 21:9 hero on the article page.

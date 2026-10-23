@@ -43,7 +43,7 @@ export const pageIntros: Record<string, PageIntro> = {
     eyebrow: "Sports Business & Consulting",
     title: "Behind the Game",
     description:
-      "Placeholder hero copy — real copy lands during content integration. Connecting underserved students and student-athletes, particularly at HBCUs, to opportunities across the global sports industry.",
+      "Talent is everywhere. Access to opportunity is not. Behind the Game connects underserved students and student-athletes, particularly at HBCUs, to mentors, career paths, and real jobs across the global sports industry.",
   },
   digitalLandscape: {
     eyebrow: "Digital Landscape",
@@ -55,7 +55,7 @@ export const pageIntros: Record<string, PageIntro> = {
     eyebrow: "Symposium Series",
     title: "Events",
     description:
-      "Placeholder copy — recap of the Howard University symposium (March 2026) and details on the upcoming Maryland event.",
+      "Recaps from the Behind the Game event series: Howard University (Feb 2026), Navigating the Industry at the University of Maryland (May 2026), and Bowie State University (Sept 2026).",
   },
   cv: {
     eyebrow: "Founder",
@@ -65,7 +65,8 @@ export const pageIntros: Record<string, PageIntro> = {
   articles: {
     eyebrow: "Articles",
     title: "All Posts",
-    description: "Placeholder copy — blog index for Behind the Game articles.",
+    description:
+      "Lessons, recaps, and practical advice from the Behind the Game community for students and student-athletes building a career in sports.",
   },
   getInvolved: {
     eyebrow: "Get Involved",
@@ -83,7 +84,7 @@ export const homeContent = {
     recap: {
       meta: "Howard University — Feb 26, 2026",
       title: "Pilot Recap",
-      body: "Placeholder recap card copy — real copy lands during content integration.",
+      body: "Where it started: a student-led symposium at Howard University that put students in the same room as the professionals building careers in sports.",
     },
   },
   vision: {
@@ -118,16 +119,36 @@ export const homeContent = {
     ],
   },
   programs: [
-    { name: "Program One", description: "Placeholder program description." },
-    { name: "Program Two", description: "Placeholder program description." },
-    { name: "Program Three", description: "Placeholder program description." },
-    { name: "Program Four", description: "Placeholder program description." },
-    { name: "Program Five", description: "Placeholder program description." },
+    {
+      name: "Symposium Series",
+      description:
+        "Student-centered events where industry leaders share how they got in, and how students can too.",
+    },
+    {
+      name: "Career Panels",
+      description:
+        "Focused conversations with working professionals in marketing, player affairs, agency, and operations.",
+    },
+    {
+      name: "Mentorship",
+      description:
+        "One-to-one and small-group relationships that turn a conversation into guidance, introductions, and a next step.",
+    },
+    {
+      name: "Tennis for Schools",
+      description:
+        "Structured tennis programming that builds discipline, consistency, and focus while connecting students to education, mentorship, and college and career preparation.",
+    },
+    {
+      name: "Workshops & Career Exploration",
+      description:
+        "Hands-on sessions on resumes, networking, and understanding the business side of sports.",
+    },
   ],
   pilot: {
     eyebrow: "Pilot Highlight",
     title: "Howard University, Feb 26, 2026",
-    body: "Placeholder recap of the Howard pilot program — real copy lands during content integration.",
+    body: "On February 26, 2026, Behind the Game held its first symposium at Howard University. Students heard directly from industry professionals, asked the questions they rarely get to ask, and left with names, ideas, and next steps. It proved what we believed: when students are in the room, they belong in the industry. Since then, we've taken the work to the University of Maryland (May 2026) and Bowie State University (September 2026).",
   },
   cta: {
     eyebrow: "Get Involved",
@@ -141,7 +162,7 @@ export const eventsContent = {
   hero: {
     eyebrow: "Symposium Series",
     title: "Moments Mean Everything",
-    body: "Placeholder recap copy — real copy lands during content integration.",
+    body: "Every Behind the Game symposium is built around one idea: moments mean everything. One conversation, one introduction, or one honest answer from someone who has done the job can change what a student believes is possible.",
   },
   cta: {
     eyebrow: "What's Next",
